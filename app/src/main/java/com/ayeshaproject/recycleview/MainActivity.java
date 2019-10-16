@@ -28,9 +28,16 @@ public class MainActivity extends Activity {
 
         listItems = new ArrayList<>();
 
+
+
         for(int i=0;i<10;i++)
         {
-            ListItem item = new ListItem("name","add");
+            ArrayList<Model> arr = new ArrayList<Model>();
+            for(int j=0;j<10;j++)
+            {
+                arr.add(new Model("ayesha" + j));
+            }
+            ListItem item = new ListItem("name","add",arr);
             listItems.add(item);
         }
 
